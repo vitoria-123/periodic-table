@@ -1,0 +1,199 @@
+:root{
+    --verde: #8DDA1B;
+    --laranja: #F39422;
+    --amarelo: #F0EC1A;
+    --rosa: #E41F7B;
+    --ciano: cyan;
+    --azul: #000272;
+    --azulclaro: #0D9FF3;
+    --vermelho: #DA0037;
+    --cinza: #8C8C8C;
+    --arredondamento: 10px;
+    --borda: 3px solid;
+}
+body{
+    background: black;
+    font-size: 20px;
+    color: #fff;
+    font-family: arial;
+}
+.tabelas{
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: center;
+    align-content: space-between; */
+}
+div[id^=quadrados]{
+    display: flex;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    margin: 0;
+}
+#quadrados1{
+    position: relative;
+    width: 1093px;
+    height: 423px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 7px;
+    gap: 5px;
+}
+#quadrados2{
+    position: relative;
+    width: 1093px;
+    height: 115px;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    flex-flow: column;
+}
+div[class^=coluna]{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    gap: 5px;
+}
+div[class^=linha]{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.quadrado{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: black;
+    border-radius: var(--arredondamento);
+    transition: ease-in-out transform 150ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+}
+#quadrados > div{
+    margin: 5px;
+}
+.quadrado.verde{
+    border: var(--borda) var(--verde);
+}
+.legenda.verde{
+    background-color: var(--verde);
+}
+#a ~ #b{
+    background-color: var(--verde);
+}
+.quadrado.laranja{
+    border: var(--borda) var(--laranja);
+}
+.legenda.laranja{
+    background-color: var(--laranja);
+}
+.quadrado.rosa{
+    border: var(--borda) var(--rosa);
+}
+.legenda.rosa{
+    background-color: var(--rosa);
+}
+.quadrado.ciano{
+    border: var(--borda) var(--ciano);
+}
+.legenda.ciano{
+    background-color: var(--ciano);
+}
+.quadrado.azul{
+    border: var(--borda) var(--azul);
+}
+.legenda.azul{
+    background-color: var(--azul);
+}
+.quadrado.azulclaro{
+    border: var(--borda) var(--azulclaro);
+}
+.legenda.azulclaro{
+    background-color: var(--azulclaro);
+}
+.quadrado.amarelo{
+    border: var(--borda) var(--amarelo);
+}
+.legenda.amarelo{
+    background-color: var(--amarelo);
+}
+.quadrado.vermelho{
+    border: var(--borda) var(--vermelho);
+}
+.legenda.vermelho{
+    background-color: var(--vermelho);
+}
+.quadrado.cinza{
+    border: var(--borda) var(--cinza);
+}
+.legenda.cinza{
+    background-color: var(--cinza);
+}
+.quadrado:hover{
+    transform: scale(1.6);
+    cursor: pointer;
+    z-index: 1;
+}
+.quadrado:focus{
+    transform: scale(1.6);
+    z-index: 1;
+}
+.numero{
+    text-align: start;
+    border: solid 1px transparent;
+    width: 100%;
+    height: 3.3px;
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-size: 10px;
+}
+.elemento{
+    height: 8px;
+    margin-top: -0.5px;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 8px;
+}
+.simbolo{
+    width: 100%;
+    height: 20px;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+}
+.peso{
+    width: 100%;
+    font-size: 8px;
+}
+.legenda{
+    height: 10px;
+}
+#legendas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    font-size: 16px;
+    margin: auto;
+}
+.legenda{
+    min-height: 24px;
+    min-width: 24px;
+    height: 28px;
+    width: 28px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: var(--arredondamento);
+}
+.grupo{
+    margin-right: 5px;
+    margin-left: 4px;
+}
